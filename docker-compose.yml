@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  mlflow:
+    build: ./app
+    container_name: mlflow
+#    environment:
+#      - ARTIFACT_ROOT=ftp://mlflow:mlflow_password@${HOST_IP}/data
+    ports:
+      - "8091:5000"
+#    volumes:
+#      - C:\Users\Lenovo\PycharmProjects\volumes\mlflow:/app
+#    depends_on:
+#      - ftpd_server
